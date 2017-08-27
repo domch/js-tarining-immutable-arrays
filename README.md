@@ -3,7 +3,7 @@
 
 ## Find the murderer!
    
-So you have a train travelling through many cities called Persons (in data.js). Every person in this train is somehow related at least to another one. While the train goes through the cities, something is happend: The engineman is murdered! An investigator is assigned to find the murder by the local government. He does not let them passengers go before the investigation process is finished.
+So you have a train travelling through many cities called "Passengers" (in data.js). Every person in this train is somehow related at least to another one. While the train goes through the cities, something is happend: The engineman is murdered! An investigator is assigned to find the murder by the local government. He does not let them passengers go before the investigation process is finished.
 
 The investigator has many questions about the passengers. So you need to help him by writing appropriate functions (in "js/functions.js") for finding the murderer.
 
