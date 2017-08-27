@@ -1,5 +1,5 @@
 /**
- * So you have a train travelling thorugh many cities called Persons (in data.js). 
+ * So you have a train travelling through many cities called Persons (in data.js). 
  * Every person in this train is somehow related at least to another one.
  * While the train goes through the cities, something is happend: The engineman is murdered!
  * An investigator is assigned to find the murder by the local government. 
