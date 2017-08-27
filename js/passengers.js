@@ -59,7 +59,7 @@ const Passengers = [
         gender: "F",
         birth: new Date(1985, 1, 24),
         origin: "Istanbul",
-        entryDateInSwiss: null,
+        entryDateInSwiss: new Date(2017, 8, 16),
         children: [
             {name:"Leyla", gender:"F", age: 12}
         ],
@@ -101,9 +101,9 @@ const Passengers = [
         firstname: "Mesut",
         lastname: "C.",
         gender: "M",
-        birth: new Date(1978, 9, 9),
+        birth: new Date(2002, 9, 9),
         origin: "Adana",
-        entryDateInSwiss: null,
+        entryDateInSwiss: new Date(2017, 8, 11),
         children: [],
         addres: {
             street: "Kozans Caddesi",
@@ -146,7 +146,7 @@ const Passengers = [
         gender: "F",
         birth: new Date(1976, 8, 21),
         origin: "Antalya",
-        entryDateInSwiss: null,
+        entryDateInSwiss: new Date(2017, 8, 13),
         children: [
             {name:"John", gender:"M", age: 19}, 
             {name:"Kelly", gender:"F", age: 19},
@@ -212,7 +212,7 @@ const Passengers = [
         gender: "F",
         birth: new Date(1989, 5, 21),
         origin: "Moskow",
-        entryDateInSwiss: null,
+        entryDateInSwiss: new Date(2017, 8, 15),
         children: [
             {name:"Dymitro", gender:"F", age: 1},
         ],
@@ -281,9 +281,9 @@ const Passengers = [
         firstname: "Hannes",
         lastname: "K.",
         gender: "M",
-        birth: new Date(1987, 8, 13),
+        birth: new Date(2004, 8, 13),
         origin: "Schmerikon",
-        entryDateInSwiss: new Date(1987, 8, 13),
+        entryDateInSwiss: new Date(2004, 8, 13),
         children: [],
         addres: {
             street: "Milchburgstr. 65",
@@ -323,9 +323,9 @@ const Passengers = [
         firstname: "Michel",
         lastname: "R.",
         gender: "F",
-        birth: new Date(1984, 7, 1),
+        birth: new Date(2005, 7, 1),
         origin: "Schmerikon",
-        entryDateInSwiss: new Date(1984, 7, 1),
+        entryDateInSwiss: new Date(2005, 7, 1),
         children: [],
         addres: {
             street: "Obergasse 5",
@@ -360,6 +360,26 @@ const Passengers = [
         languages: ["EN", "DE", "FR"],
         salary: 61000.00,
         friends: [45, 452, 45, 367, 611]
+    },
+    
+    {
+        id: 400,
+        firstname: "Giovanni",
+        lastname: "O.",
+        gender: "M",
+        birth: new Date(2002, 9, 12),
+        origin: "Olten",
+        entryDateInSwiss: new Date(2002, 9, 12),
+        children: [],
+        addres: {
+            street: "Pokemonstr. 51",
+            zip: "8798",
+            city: "Olten",
+            country: "Swiss"
+        },
+        languages: ["IT"],
+        salary: 1000.00,
+        friends: []
     },
     
     {
