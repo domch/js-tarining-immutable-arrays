@@ -49,6 +49,28 @@ const persons = [
         salary: 15000.00,
         friends: []
     },
+    
+    {
+        id: 367,
+        firstname: "Halime",
+        lastname: "L.",
+        gender: "F",
+        birth: new Date(1979, 4, 4),
+        origin: "Adana",
+        entryDateInSwiss: new Date(2005, 2, 14),
+        children: [
+            {name:"Cemil", gender:"M", age: 6}
+        ],
+        addres: {
+            street: "Sarganserstr. 3",
+            zip: "8301",
+            city: "Effretikon",
+            country: "Swiss"
+        },
+        languages: ["DE", "TR"],
+        salary: 55000.00,
+        friends: []
+    },    
         
     {
         id: 205,
@@ -98,21 +120,22 @@ const persons = [
         firstname: "Jenifer",
         lastname: "K.",
         gender: "F",
-        birth: new Date(1981, 3, 15),
+        birth: new Date(1976, 8, 21),
         origin: "Antalya",
-        entryDateInSwiss: new Date(2004, 8, 1),
+        entryDateInSwiss: null,
         children: [
-            {name:"Melih", gender:"M", age: 3}, 
-            {name:"Zeynep", gender:"F", age: 1}
+            {name:"John", gender:"M", age: 19}, 
+            {name:"Kelly", gender:"F", age: 19},
+            {name:"Henry", gender:"M", age: 17}
         ],
         addres: {
-            street: "Ziegelwiessstr. 45",
-            zip: "8798",
-            city: "Olten",
-            country: "Swiss"
+            street: "Kentucky Road 120",
+            zip: "12998",
+            city: "Washington",
+            country: "US"
         },
-        languages: ["EN", "DE", "TR"],
-        salary: 85000.00,
+        languages: ["EN"],
+        salary: 63000.00,
         friends: []
     }, 
     
@@ -166,7 +189,9 @@ const persons = [
         birth: new Date(1989, 5, 21),
         origin: "Moskow",
         entryDateInSwiss: null,
-        children: [],
+        children: [
+            {name:"Dymitro", gender:"F", age: 1},
+        ],
         addres: {
             street: "Moswkostr. 101",
             zip: "98734",
@@ -183,7 +208,7 @@ const persons = [
         firstname: "Latif",
         lastname: "H.",
         gender: "M",
-        birth: new Date(1980, 10, 10),
+        birth: new Date(1980, 8, 21),
         origin: "Istanbul",
         entryDateInSwiss: new Date(2013, 3, 9),
         children: [
@@ -199,7 +224,53 @@ const persons = [
         languages: ["EN", "DE", "TR"],
         salary: 102000.00,
         friends: []
-    },    
+    },   
+    
+    {
+        id: 965,
+        firstname: "Kumar",
+        lastname: "P.",
+        gender: "M",
+        birth: new Date(1974, 3, 21),
+        origin: "New Delhi",
+        entryDateInSwiss: new Date(1999, 5, 24),
+        children: [
+            {name:"Adhira", gender:"F", age: 15}, 
+            {name:"Abha", gender:"F", age: 13},
+            {name:"Alpana", gender:"F", age: 11}, 
+            {name:"Alka", gender:"F", age: 9},
+            {name:"Kuschi", gender:"F", age: 17}
+        ],
+        addres: {
+            street: "Samstagerstr. 102",
+            zip: "8000",
+            city: "Zürich",
+            country: "Swiss"
+        },
+        languages: ["EN", "DE", "IN"],
+        salary: 64000.00,
+        friends: []
+    },  
+    
+    {
+        id: 978,
+        firstname: "Hannes",
+        lastname: "K.",
+        gender: "M",
+        birth: new Date(1987, 8, 13),
+        origin: "New Delhi",
+        entryDateInSwiss: new Date(1999, 5, 24),
+        children: [],
+        addres: {
+            street: "Milchburgstr. 65",
+            zip: "8000",
+            city: "Zürich",
+            country: "Swiss"
+        },
+        languages: ["EN", "DE"],
+        salary: 84500.00,
+        friends: []
+    },      
 ];
 
 
