@@ -1,10 +1,34 @@
 /**
+ * Here is the train and the passengers in this terrible murder scene!
+ *
+ * INFO:
  * Here are some datastructures which provide the database for the tests.
  * "const" is another and new form of "var" which prevents that program flow changes its reference.
  *
- * GENDER Type: M(male), F(female)
+ * Types:
+ * GENDER -> M(male) or F(female)
  */
-const persons = [
+const Passengers = [
+        {
+        id: 45,
+        firstname: "Mehmet",
+        lastname: "B.",
+        gender: "M",
+        birth: new Date(1978, 7, 5),
+        origin: "Giresun",
+        entryDateInSwiss: new Date(2005, 7, 1),
+        children: [],
+        addres: {
+            street: "Matternhornstr. 123",
+            zip: "8604",
+            city: "Volketswil",
+            country: "Swiss"
+        },
+        languages: ["EN", "DE", "TR"],
+        salary: 83000.00,
+        friends: [451, 101, 402]
+    },
+    
     {
         id: 101,
         firstname: "Ferdi",
@@ -23,9 +47,9 @@ const persons = [
             city: "Volketswil",
             country: "Swiss"
         },
-        languages: ["DE", "TR"],
+        languages: ["DE", "TR", "JP"],
         salary: 75000.00,
-        friends: []
+        friends: [451, 452, 609]
     },
     
     {
@@ -69,7 +93,7 @@ const persons = [
         },
         languages: ["DE", "TR"],
         salary: 55000.00,
-        friends: []
+        friends: [205, 123, 611]
     },    
         
     {
@@ -84,12 +108,12 @@ const persons = [
         addres: {
             street: "Kozans Caddesi",
             zip: "01005",
-            city: "Adana"
+            city: "Adana",
             country: "Turkey"
         },
         languages: ["EN", "TR"],
         salary: 45000.00,
-        friends: []
+        friends: [191, 311, 561, 603, 299]
     },
     
     {
@@ -101,8 +125,8 @@ const persons = [
         origin: "Antalya",
         entryDateInSwiss: new Date(2004, 8, 1),
         children: [
-            {name:"Melih", gender:"M", age: 3}, 
-            {name:"Zeynep", gender:"F", age: 1}
+            {name:"Mehmet Sami", gender:"M", age: 1}, 
+            {name:"Nihal", gender:"F", age: 4}
         ],
         addres: {
             street: "Ziegelwiessstr. 45",
@@ -112,7 +136,7 @@ const persons = [
         },
         languages: ["EN", "DE", "TR"],
         salary: 85000.00,
-        friends: []
+        friends: [45, 101, 402, 367, 205]
     },   
     
     {
@@ -136,7 +160,7 @@ const persons = [
         },
         languages: ["EN"],
         salary: 63000.00,
-        friends: []
+        friends: [452, 609, 610, 611]
     }, 
     
     {
@@ -158,7 +182,7 @@ const persons = [
         },
         languages: ["EN", "DE", "TR", "KU"],
         salary: 80000.00,
-        friends: []
+        friends: [191, 561, 603, 299, 965]
     },
     
     {
@@ -178,7 +202,7 @@ const persons = [
         },
         languages: ["EN", "DE", "TR", "RU"],
         salary: 82000.00,
-        friends: []
+        friends: [402, 367, 205, 123, 191]
     },  
     
     {
@@ -200,7 +224,7 @@ const persons = [
         },
         languages: ["EN", "RU"],
         salary: 22000.00,
-        friends: []
+        friends: [45, 610, 978, 451, 101]
     }, 
     
     {
@@ -221,9 +245,9 @@ const persons = [
             city: "Zürich",
             country: "Swiss"
         },
-        languages: ["EN", "DE", "TR"],
+        languages: ["EN", "DE", "TR", "KU"],
         salary: 102000.00,
-        friends: []
+        friends: [609, 611, 205, 311]
     },   
     
     {
@@ -249,7 +273,7 @@ const persons = [
         },
         languages: ["EN", "DE", "IN"],
         salary: 64000.00,
-        friends: []
+        friends: [299, 123, 45, 609]
     },  
     
     {
@@ -258,8 +282,8 @@ const persons = [
         lastname: "K.",
         gender: "M",
         birth: new Date(1987, 8, 13),
-        origin: "New Delhi",
-        entryDateInSwiss: new Date(1999, 5, 24),
+        origin: "Schmerikon",
+        entryDateInSwiss: new Date(1987, 8, 13),
         children: [],
         addres: {
             street: "Milchburgstr. 65",
@@ -269,8 +293,166 @@ const persons = [
         },
         languages: ["EN", "DE"],
         salary: 84500.00,
-        friends: []
-    },      
+        friends: [965, 101, 205, 451, 299]
+    }, 
+    
+    {
+        id: 621,
+        firstname: "Zafer",
+        lastname: "D.",
+        gender: "M",
+        birth: new Date(1987, 7, 21),
+        origin: "Schmerikon",
+        entryDateInSwiss: new Date(1987, 7, 21),
+        children: [
+            {name:"Zeynep", gender:"F", age: 1}
+        ],
+        addres: {
+            street: "Keegarmenstr. 13",
+            zip: "8716",
+            city: "Schmerikon",
+            country: "Swiss"
+        },
+        languages: ["EN", "DE", "TR", "JP", "FR"],
+        salary: 95000.00,
+        friends: [609, 610, 611, 402]
+    },     
+    
+    {
+        id: 363,
+        firstname: "Michel",
+        lastname: "R.",
+        gender: "F",
+        birth: new Date(1984, 7, 1),
+        origin: "Schmerikon",
+        entryDateInSwiss: new Date(1984, 7, 1),
+        children: [],
+        addres: {
+            street: "Obergasse 5",
+            zip: "8716",
+            city: "Schmerikon",
+            country: "Swiss"
+        },
+        languages: ["DE"],
+        salary: 84500.00,
+        friends: [191, 621, 311, 367]
+    },  
+    
+    {
+        id: 451,
+        firstname: "Sandy",
+        lastname: "O.",
+        gender: "F",
+        birth: new Date(1980, 9, 12),
+        origin: "Olten",
+        entryDateInSwiss: new Date(1980, 9, 12),
+        children: [
+            {name:"Noah", gender:"M", age: 12},
+            {name:"Jürg", gender:"M", age: 9},
+            {name:"Selin", gender:"F", age: 3}
+        ],
+        addres: {
+            street: "Sandstr. 31",
+            zip: "8798",
+            city: "Olten",
+            country: "Swiss"
+        },
+        languages: ["EN", "DE", "FR"],
+        salary: 61000.00,
+        friends: [45, 452, 45, 367, 611]
+    },
+    
+    {
+        id: 452,
+        firstname: "Roger",
+        lastname: "C.",
+        gender: "M",
+        birth: new Date(1966, 5, 10),
+        origin: "Dübendorf",
+        entryDateInSwiss: new Date(1966, 5, 10),
+        children: [],
+        addres: {
+            street: "Kaninchenstr. 10",
+            zip: "8608",
+            city: "Dübendorf",
+            country: "Swiss"
+        },
+        languages: ["EN", "DE", "IT"],
+        salary: 92000.00,
+        friends: [101, 451, 363, 965, 978]
+    },  
+    
+    {
+        id: 609,
+        firstname: "Katherina",
+        lastname: "S.",
+        gender: "F",
+        birth: new Date(1983, 4, 21),
+        origin: "Tomsk",
+        entryDateInSwiss: new Date(2001, 4, 21),
+        children: [
+            {name:"Irina", gender:"F", age: 5},
+            {name:"Olexander", gender:"M", age: 3}
+        ],
+        addres: {
+            street: "Trinnistr. 10",
+            zip: "8608",
+            city: "Dübendorf",
+            country: "Swiss"
+        },
+        languages: ["DE", "RU"],
+        salary: 52000.00,
+        friends: [561, 191, 978, 611, 101]
+    }, 
+    
+    {
+        id: 610,
+        firstname: "Mara",
+        lastname: "Z.",
+        gender: "F",
+        birth: new Date(1978, 3, 11),
+        origin: "Dübendorf",
+        entryDateInSwiss: new Date(1978, 3, 11),
+        children: [
+            {name:"Selina", gender:"F", age: 9}, 
+            {name:"Melina", gender:"F", age: 9}, 
+            {name:"Michael", gender:"M", age: 1}
+        ],
+        addres: {
+            street: "Kontostr. 99",
+            zip: "8608",
+            city: "Dübendorf",
+            country: "Swiss"
+        },
+        languages: ["EN", "DE"],
+        salary: 51000.00,
+        friends: [45, 609, 363, 299]
+    },   
+    
+    {
+        id: 611,
+        firstname: "Patrick",
+        lastname: "D.",
+        gender: "M",
+        birth: new Date(1976, 3, 21),
+        origin: "Schmerikon",
+        entryDateInSwiss: new Date(1976, 3, 21),
+        children: [
+            {name:"Marc", gender:"M", age: 15}, 
+            {name:"Roger", gender:"M", age: 13},
+            {name:"Matilda", gender:"F", age: 11}, 
+            {name:"Robin", gender:"M", age: 9}
+        ],
+        addres: {
+            street: "Chimligass 22",
+            zip: "8716",
+            city: "Schmerikon",
+            country: "Swiss"
+        },
+        languages: ["EN", "DE", "FR", "IT"],
+        salary: 104000.00,
+        friends: [191, 311, 561, 603, 299, 965, 978, 621]
+    },  
 ];
 
 
