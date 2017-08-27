@@ -14,14 +14,14 @@
  *  const     // this is an alternative way of declaring variables which does not allowed reference changes
  */
 
-function findPersonByIndex(pIndex){
-    return Passengers;
+function findPersonByIndex(pPassengers, pIndex){
+    return pPassengers;
 }
 
-function findNumberOfWomen(){
-    return Passengers;
+function findNumberOfWomen(pPassengers){
+    return pPassengers;
 }
 
-function findNumberOfMen(){
-    return Passengers;
+function findNumberOfMen(pPassengers){
+    return pPassengers;
 }
