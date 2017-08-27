@@ -15,13 +15,13 @@
  */
 
 function findPersonByIndex(pIndex){
-    return Persons;
+    return Passengers;
 }
 
 function findNumberOfWomen(){
-    return Persons;
+    return Passengers;
 }
 
 function findNumberOfMen(){
-    return Persons;
+    return Passengers;
 }
