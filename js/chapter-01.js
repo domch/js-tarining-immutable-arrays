@@ -1,13 +1,4 @@
 /**
- * You need the help the investigator in his enquiry. 
- * You have to implement (write) the body of the functions below in the right way.
- * Any error in your function reduces the healthy of the investigation. 
- * So be carefull with your code, this very vital. The murderer is still in the train!!!!!
- *
- *
- * The tests need the following functions are implemented.
- * Please provide the right implementations using the array "Passengers" from the file "js/data.js"
- *
  * NOTES:
  * Do not forget to insert RETURN statement, if needed!
  * Please use the following functions primarily and if needed all the other array functions
