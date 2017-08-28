@@ -26,7 +26,7 @@
 
 
 function findNumberOfPassengers(pPassengers){
-    return pPassengers;
+    return pPassengers.length;
 }
 
 function findPersonByIndex(pPassengers, pIndex){
@@ -34,7 +34,11 @@ function findPersonByIndex(pPassengers, pIndex){
 }
 
 function findNumberOfWomen(pPassengers){
-    return pPassengers;
+    var theWomen = pPassengers.filter(function(pPerson){
+                        return pPerson.gender == "F";
+                    });
+    
+    return theWomen.length;
 }
 
 function findNumberOfMen(pPassengers){
@@ -42,7 +46,11 @@ function findNumberOfMen(pPassengers){
 }
 
 function findPersonByTicketId(pPassengers, pId){
-    return pPassengers;
+    const person = pPassengers.find(function(pPerson){
+        return pPerson.id == pId;
+    });
+    
+    return person.lastname;
 }
 
 function findPassengersWithNoChildren(pPassengers){
