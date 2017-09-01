@@ -22,6 +22,21 @@
  * - The decleration order of functions is not important!
  */
 
-
-
-//coming soon...
+function findNumberOfPassengersByMinChildren(pPassengers, pNoOfChildren){
+    return pPassengers;
+}
+function findNumberPassengersWithByChildrenAndGender(pPassengers, pNoOfChildren, pGender){
+    return pPassengers;
+}
+function findNumberOfPassengersByCountry(pPassengers, pCountry){
+    return pPassengers;
+}
+function findNumberOfPassengersByChildrenAndCountry(pPassengers, pNoOfChildren, pCountry){
+    return pPassengers;
+}
+function findNumberOfPassengersByLanguageAndGender(pPassengers, pLanguage, pGender){
+    return pPassengers;
+}
+function findNumberOfPassengersByLanguageAndGenderAndCountry(pPassengers, pLanguage, pGender, pCountry){
+    return pPassengers;
+}

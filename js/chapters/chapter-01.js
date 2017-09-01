@@ -30,33 +30,25 @@ function findNumberOfPassengers(pPassengers){
 }
 
 function findPersonByIndex(pPassengers, pIndex){
-    return pPassengers;
+    return pPassengers[pIndex - 1].firstname;
 }
 
 function findNumberOfWomen(pPassengers){
-    var theWomen = pPassengers.filter(function(pPerson){
-                        return pPerson.gender == "F";
-                    });
-    
-    return theWomen.length;
+    return pPassengers.filter(person => person.gender === "F" ).length;
 }
 
 function findNumberOfMen(pPassengers){
-    return pPassengers;
+    return pPassengers.filter(person => person.gender === "M" ).length;
 }
 
 function findPersonByTicketId(pPassengers, pId){
-    const person = pPassengers.find(function(pPerson){
-        return pPerson.id == pId;
-    });
-    
-    return person.lastname;
+    return pPassengers.find(person => person.id == pId).lastname;
 }
 
 function findPassengersWithNoChildren(pPassengers){
-    return pPassengers;
+    return pPassengers.filter(person => person.children.length == 0).length;
 }
 
 function findUnderagePassengers(pPassengers){
-    return pPassengers;
+    return pPassengers.filter(person => person.birth.getFullYear() > 1999).length;
 }

@@ -5,6 +5,55 @@
  *
  */
 
+
+
+describe('Chapter 02 - Get more statistical information', () => {
+
+    it('01) How many passengers have at least one child?', () => {
+        let result = findNumberOfPassengersByMinChildren(Passengers, 1); 
+        result.should.be.equal(14);
+    });
+    
+    it('02) How many woman passengers have at least two children?', () => {
+        let result = findNumberPassengersByMinChildrenAndGender(Passengers, 2, "F"); 
+        result.should.be.equal(4);
+    });
+    
+    it('03) How many passengers are coming from Turkey?', () => {
+        let result = findNumberOfPassengersByCountry(Passengers, "Turkey"); 
+        result.should.be.equal(2);
+    });   
+    
+    it('04) How many passengers are coming from Switzerland with no children?', () => {
+        let result = findNumberOfPassengersByChildrenAndCountry(Passengers, 0, "Turkey"); 
+        result.should.be.equal(6);
+    });  
+    
+    it('05) How many women do know the language "EN" english?', () => {
+        let result = findNumberOfPassengersByLanguageAndGender(Passengers, "EN", "F"); 
+        result.should.be.equal(2);
+    });  
+    
+    it('06) How many men do know the language "DE" and are coming from Turkey?', () => {
+        let result = findNumberOfPassengersByLanguageAndGenderAndCountry(Passengers, "EN", "M", "Turkey"); 
+        result.should.be.equal(1);
+    }); 
+    
+    it('07) How many passengers are earning at least 61000.- and do know "EN" and has no children?', () => {
+        let result = findNumberOfPassengersByLanguageAndSalaryAndNumberOfChildren(Passengers, "EN", 61000, 0); 
+        result.should.be.equal(4);
+    });  
+    
+    it('08) Is there any person in the train earning less than 50000.- and living in Swiss?', () => {
+        let result = isThereAnyPersonBySalaryAndCountry(Passengers, 50000, "Swiss"); 
+        result.should.be.equal(1);
+    }); 
+});
+
+
+
+
+
 describe('Chapter 01 - Get general information about the train', () => {
 
     it('01) Howmany passengers are in the train?', () => {
