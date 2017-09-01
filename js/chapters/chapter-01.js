@@ -26,7 +26,7 @@
 
 
 function findNumberOfPassengers(pPassengers){
-    return pPassengers.length;
+    return pPassengers.length;  
 }
 
 function findPersonByIndex(pPassengers, pIndex){
