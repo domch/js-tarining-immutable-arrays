@@ -25,7 +25,7 @@
 function findNumberOfPassengersByMinChildren(pPassengers, pNoOfChildren){
     return pPassengers;
 }
-function findNumberPassengersWithByChildrenAndGender(pPassengers, pNoOfChildren, pGender){
+function findNumberPassengersByMinChildrenAndGender(pPassengers, pNoOfChildren, pGender){
     return pPassengers;
 }
 function findNumberOfPassengersByCountry(pPassengers, pCountry){
@@ -39,4 +39,19 @@ function findNumberOfPassengersByLanguageAndGender(pPassengers, pLanguage, pGend
 }
 function findNumberOfPassengersByLanguageAndGenderAndCountry(pPassengers, pLanguage, pGender, pCountry){
     return pPassengers;
+}
+function findNumberOfPassengersByLanguageAndSalaryAndNumberOfChildren(pPassengers, pLangauge, pSalary, pNoOfChildren){
+    return pPassengers;
+}
+function isThereAnyPersonBySalaryAndCountry(pPassengers, pSalary, pCountry){
+    return pPassengers;
+}
+function findNumberOfPassengersByEntryDate(pPassengers, pEntryDate){
+    return pPassengers;
+}
+function findNamesOfPassengersByOrigin(pPassengers, pOrigin){
+    return pPassengers; 
+}
+function findNamesOfPassengersByHoroscope(Passengers, pHoroscopeSign){
+    return pPassengers;    
 }

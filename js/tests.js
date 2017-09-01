@@ -46,8 +46,24 @@ describe('Chapter 02 - Get more statistical information', () => {
     
     it('08) Is there any person in the train earning less than 50000.- and living in Swiss?', () => {
         let result = isThereAnyPersonBySalaryAndCountry(Passengers, 50000, "Swiss"); 
-        result.should.be.equal(1);
+        result.should.be.equal(true);
     }); 
+    
+    it('09) How many passengers have been in Swiss since 4 months?', () => {
+        let result = findNumberOfPassengersByEntryDate(Passengers, new Date(2017, 3, 1)); 
+        result.should.be.equal(4);
+    }); 
+    
+    it('10) Find the name of passengers originating in Adana?', () => {
+        let result = findNamesOfPassengersByOrigin(Passengers, "Adana"); 
+        result.should.be.deepEqual(["Halime", "Mesut"]]);
+    });
+
+    it('11) Find the name of passengers who has horoscope "LEO"?', () => {
+        let result = findNamesOfPassengersByHoroscope(Passengers, "LEO"); 
+        result.should.be.deepEqual(["Mehmet", "Zafer", "Michael"]]);
+    });
+       
 });
 
 
