@@ -56,12 +56,17 @@ describe('Chapter 02 - Get more statistical information', () => {
     
     it('10) Find the name of passengers originating in Adana?', () => {
         let result = findNamesOfPassengersByOrigin(Passengers, "Adana"); 
-        result.should.be.deepEqual(["Halime", "Mesut"]]);
+        result.should.be.deepEqual(["Halime", "Mesut"]);
     });
 
     it('11) Find the name of passengers who has horoscope "LEO"?', () => {
         let result = findNamesOfPassengersByHoroscope(Passengers, "LEO"); 
-        result.should.be.deepEqual(["Mehmet", "Zafer", "Michael"]]);
+        result.should.be.deepEqual(["Mehmet", "Zafer", "Michael"]);
+    });
+    
+    it('12) How many passengers do know the languages "EN" and "DE" but not "TR"', () => {
+        let result = findNamesOfPassengersByAcceptedAndNotAcceptedLanguages(Passengers, ["DE", "TR"], ["TR"]); 
+        result.should.be.equal(6);
     });
        
 });

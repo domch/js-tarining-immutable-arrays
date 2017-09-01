@@ -52,6 +52,9 @@ function findNumberOfPassengersByEntryDate(pPassengers, pEntryDate){
 function findNamesOfPassengersByOrigin(pPassengers, pOrigin){
     return pPassengers; 
 }
-function findNamesOfPassengersByHoroscope(Passengers, pHoroscopeSign){
+function findNamesOfPassengersByHoroscope(pPassengers, pHoroscopeSign){
     return pPassengers;    
+}
+function findNamesOfPassengersByAcceptedAndNotAcceptedLanguages(pPassengers, pAccesptedLanguages, pNotAcceptedLanguages){
+    return pPassengers;
 }
