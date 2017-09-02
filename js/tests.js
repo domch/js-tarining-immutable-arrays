@@ -7,6 +7,37 @@
 
 
 
+/**
+ * This function elminates all duplicated entries from the array. 
+ * @param pArray, includes a collection of string items
+ * distinct(["it", "it", "it", "club"]); // Result: ["it", "club"];
+ */
+function distinct(pArray){
+    return new Array(...new Set(pArray));
+}
+
+
+
+describe('Chapter 03 - Find persons', () => {
+
+    it('01) Find the countries of persons who can speak german and earn mor than 50000.-?', () => {
+        let passengers = findPersonsByLanguaheAndMinSalary(Passengers, "DE", 50000); 
+        let result = findCountries(passengers);
+        
+        result.join("").should.be.deepEqual("Swiss");
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
 describe('Chapter 02 - Get more statistical information', () => {
 
     it('01) How many passengers have at least one child?', () => {
@@ -67,8 +98,7 @@ describe('Chapter 02 - Get more statistical information', () => {
     it('12) How many passengers do know the languages "EN" and "DE" but not "TR"', () => {
         let result = findNamesOfPassengersByAcceptedAndNotAcceptedLanguages(Passengers, ["DE", "TR"], ["TR"]); 
         result.should.be.equal(6);
-    });
-       
+    });  
 });
 
 
