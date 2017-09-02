@@ -24,4 +24,10 @@
 
 
 
-//coming soon...
+function findPersonsByLanguaheAndMinSalary(pPassengers, pLanguage, pSalary){
+    return pPassengers     
+} 
+
+function findCountries(pPassengers){
+    return pPassengers;
+}

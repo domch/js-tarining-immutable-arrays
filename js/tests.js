@@ -9,6 +9,7 @@
 
 /**
  * This function elminates all duplicated entries from the array. 
+ *
  * @param pArray, includes a collection of string items
  * distinct(["it", "it", "it", "club"]); // Result: ["it", "club"];
  */
@@ -18,13 +19,13 @@ function distinct(pArray){
 
 
 
-describe('Chapter 03 - Find persons', () => {
+describe('Chapter 03 - Find persons on details', () => {
 
     it('01) Find the countries of persons who can speak german and earn mor than 50000.-?', () => {
         let passengers = findPersonsByLanguaheAndMinSalary(Passengers, "DE", 50000); 
         let result = findCountries(passengers);
         
-        result.join("").should.be.deepEqual("Swiss");
+        distinct(result).should.be.deepEqual(["Swiss"]);
     });
 });
 
