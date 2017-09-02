@@ -24,10 +24,32 @@
 
 
 
-function findPersonsByLanguaheAndMinSalary(pPassengers, pLanguage, pSalary){
-    return pPassengers     
-} 
+/**
+ * This function elminates all duplicated entries from the array. 
+ *
+ * @param pArray, includes a collection of string items
+ * distinct(["it", "it", "it", "club"]); // Result: ["it", "club"];
+ */
+function distinct(pArray){
+    return new Array(...new Set(pArray));
+}
 
 function findCountries(pPassengers){
     return pPassengers;
 }
+
+function findLanguages(pPassengers){
+    return pPassengers;
+}
+
+function findCities(pPassengers){
+    return pPassengers;
+}
+
+
+
+
+function findPersonsByLanguaheAndMinSalary(pPassengers, pLanguage, pSalary){
+    return pPassengers     
+} 
+
