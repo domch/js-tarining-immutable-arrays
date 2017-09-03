@@ -6,7 +6,7 @@
  */
 
 
-describe('Chapter 03 - Find persons on details', () => {
+describe('Chapter 03 - Find persons in details', () => {
 
     it('01) Find the countries of persons who can speak german and earn mor than 50000.-?', () => {
         let passengers = findPersonsByLanguaheAndMinSalary(Passengers, "DE", 50000); 
@@ -22,6 +22,8 @@ describe('Chapter 03 - Find persons on details', () => {
         distinct(result).should.be.deepEqual(["Swiss"]);
     });
 });
+
+
 
 
 
@@ -95,6 +97,15 @@ describe('Chapter 02 - Get more statistical information', () => {
         result.should.be.equal(6);
     });  
 });
+
+
+
+
+
+
+
+
+
 
 
 
