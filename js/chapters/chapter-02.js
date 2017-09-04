@@ -93,7 +93,17 @@ function findNamesOfPassengersByHoroscope(pPassengers, pHoroscopeSign){
         })
         .map(person => person.firstname);    
 }
-function findNamesOfPassengersByAcceptedAndNotAcceptedLanguages(pPassengers, pAcceptedLanguages, pNotAcceptedLanguages){
+
+// AND
+function findNamesOfPassengersByAcceptedAndNotAcceptedLanguages3(pPassengers, pAcceptedLanguages, pNotAcceptedLanguages){
+    return pPassengers
+            .filter(person => person.languages.filter(lang => pAcceptedLanguages.includes(lang)).length == pAcceptedLanguages.length
+                              && person.languages.filter(lang => pNotAcceptedLanguages.includes(lang)).length == 0)
+            .length;
+}
+
+// OR
+function findNamesOfPassengersByAcceptedAndNotAcceptedLanguages2(pPassengers, pAcceptedLanguages, pNotAcceptedLanguages){
     return pPassengers
             .filter(person => person.languages.indexOf.apply(person.languages, pAcceptedLanguages) > -1
                                && person.languages.indexOf.apply(person.languages, pNotAcceptedLanguages) == -1)
