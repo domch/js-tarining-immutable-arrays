@@ -3,8 +3,12 @@
  *
  * Please open the file "js/chapters/chapter-xx.js"
  *
+ * Array.prototype.map()
+ *
  */
 
+
+/*
 
 describe('Chapter 03 - Find persons in details', () => {
 
@@ -22,6 +26,8 @@ describe('Chapter 03 - Find persons in details', () => {
         distinct(result).should.be.deepEqual(["Swiss"]);
     });
 });
+
+*/
 
 
 
@@ -53,16 +59,16 @@ describe('Chapter 02 - Get more statistical information', () => {
     });   
     
     it('04) How many passengers are coming from Switzerland with no children?', () => {
-        let result = findNumberOfPassengersByChildrenAndCountry(Passengers, 0, "Turkey"); 
+        let result = findNumberOfPassengersByChildrenAndCountry(Passengers, 0, "Swiss"); 
         result.should.be.equal(6);
     });  
     
     it('05) How many women do know the language "EN" english?', () => {
         let result = findNumberOfPassengersByLanguageAndGender(Passengers, "EN", "F"); 
-        result.should.be.equal(2);
+        result.should.be.equal(4);
     });  
     
-    it('06) How many men do know the language "DE" and are coming from Turkey?', () => {
+    it('06) How many men do know the language "EN" and are coming from Turkey?', () => {
         let result = findNumberOfPassengersByLanguageAndGenderAndCountry(Passengers, "EN", "M", "Turkey"); 
         result.should.be.equal(1);
     }); 
@@ -78,7 +84,7 @@ describe('Chapter 02 - Get more statistical information', () => {
     }); 
     
     it('09) How many passengers have been in Swiss since 4 months?', () => {
-        let result = findNumberOfPassengersByEntryDate(Passengers, new Date(2017, 3, 1)); 
+        let result = findNumberOfPassengersByEntryDate(Passengers, new Date(2017, 4-1, 1)); 
         result.should.be.equal(4);
     }); 
     
@@ -89,11 +95,11 @@ describe('Chapter 02 - Get more statistical information', () => {
 
     it('11) Find the name of passengers who has horoscope "LEO"?', () => {
         let result = findNamesOfPassengersByHoroscope(Passengers, "LEO"); 
-        result.should.be.deepEqual(["Mehmet", "Zafer", "Michael"]);
+        result.should.be.deepEqual(["Mehmet", "Zafer", "Michel"]);
     });
     
     it('12) How many passengers do know the languages "EN" and "DE" but not "TR"', () => {
-        let result = findNamesOfPassengersByAcceptedAndNotAcceptedLanguages(Passengers, ["DE", "TR"], ["TR"]); 
+        let result = findNamesOfPassengersByAcceptedAndNotAcceptedLanguages(Passengers, ["DE", "EN"], ["TR"]); 
         result.should.be.equal(6);
     });  
 });

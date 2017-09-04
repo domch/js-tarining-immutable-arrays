@@ -22,39 +22,80 @@
  * - The decleration order of functions is not important!
  */
 
+/*
+function a(param){return param;}
+(param) =>{
+  return param;  
+} 
+*/
+
+
+
 function findNumberOfPassengersByMinChildren(pPassengers, pNoOfChildren){
-    return pPassengers;
+    return pPassengers
+        //.filter(function(person){return person.children.length>=pNoOfChildren})
+        .filter(person => person.children.length >= pNoOfChildren)
+        .map(person => {
+            //console.log(person);
+            return person;
+        })
+        .length;
 }
 function findNumberPassengersByMinChildrenAndGender(pPassengers, pNoOfChildren, pGender){
-    return pPassengers;
+    return pPassengers
+            .filter(person => person.children.length >= pNoOfChildren && person.gender === pGender).length;
 }
 function findNumberOfPassengersByCountry(pPassengers, pCountry){
-    return pPassengers;
+    return pPassengers.filter(person => person.addres.country === pCountry).length;
 }
 function findNumberOfPassengersByChildrenAndCountry(pPassengers, pNoOfChildren, pCountry){
-    return pPassengers;
+    return pPassengers.filter(function(person){
+        return person.addres.country === pCountry && person.children.length == pNoOfChildren;
+    }).length;
 }
 function findNumberOfPassengersByLanguageAndGender(pPassengers, pLanguage, pGender){
-    return pPassengers;
+    return pPassengers.filter(person => person.gender === pGender && person.languages.includes(pLanguage)).length;
 }
 function findNumberOfPassengersByLanguageAndGenderAndCountry(pPassengers, pLanguage, pGender, pCountry){
-    return pPassengers;
+    return pPassengers.filter(person => person.gender === pGender 
+                                        && person.languages.includes(pLanguage) 
+                                        && person.addres.country === pCountry).length;
 }
 function findNumberOfPassengersByLanguageAndSalaryAndNumberOfChildren(pPassengers, pLangauge, pSalary, pNoOfChildren){
-    return pPassengers;
+    return pPassengers.filter(person => person.languages.includes(pLangauge) 
+                                        && person.salary >= pSalary
+                                        && person.children.length == pNoOfChildren).length;
 }
 function isThereAnyPersonBySalaryAndCountry(pPassengers, pSalary, pCountry){
-    return pPassengers;
+    return pPassengers.filter(person => person.addres.country === pCountry && person.salary < pSalary)
+                      .length > 0;
 }
 function findNumberOfPassengersByEntryDate(pPassengers, pEntryDate){
-    return pPassengers;
+    return pPassengers.filter(person => person.entryDateInSwiss > pEntryDate).length;
 }
 function findNamesOfPassengersByOrigin(pPassengers, pOrigin){
-    return pPassengers; 
+    return pPassengers.filter(person => person.origin === pOrigin)
+                      .map(person => person.firstname); 
 }
 function findNamesOfPassengersByHoroscope(pPassengers, pHoroscopeSign){
-    return pPassengers;    
+    
+    if(pHoroscopeSign === pHoroscopeSign){
+        var startDate = new Date(2000, 7-1, 23);
+        var endDate = new Date(2000, 8-1, 22);    
+    }
+    // else if basak ...
+    
+    return pPassengers
+        .filter(person => {
+            startDate.setFullYear(person.birth.getFullYear());
+            endDate.setFullYear(person.birth.getFullYear());
+            return startDate <= person.birth && person.birth <= endDate;   
+        })
+        .map(person => person.firstname);    
 }
-function findNamesOfPassengersByAcceptedAndNotAcceptedLanguages(pPassengers, pAccesptedLanguages, pNotAcceptedLanguages){
-    return pPassengers;
+function findNamesOfPassengersByAcceptedAndNotAcceptedLanguages(pPassengers, pAcceptedLanguages, pNotAcceptedLanguages){
+    return pPassengers
+            .filter(person => person.languages.indexOf.apply(person.languages, pAcceptedLanguages) > -1
+                               && person.languages.indexOf.apply(person.languages, pNotAcceptedLanguages) == -1)
+            .length;
 }
