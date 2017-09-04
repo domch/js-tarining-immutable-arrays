@@ -79,7 +79,7 @@ function findNamesOfPassengersByOrigin(pPassengers, pOrigin){
 }
 function findNamesOfPassengersByHoroscope(pPassengers, pHoroscopeSign){
     
-    if(pHoroscopeSign === pHoroscopeSign){
+    if(pHoroscopeSign === "LEO"){
         var startDate = new Date(2000, 7-1, 23);
         var endDate = new Date(2000, 8-1, 22);    
     }
@@ -95,7 +95,7 @@ function findNamesOfPassengersByHoroscope(pPassengers, pHoroscopeSign){
 }
 
 // AND
-function findNamesOfPassengersByAcceptedAndNotAcceptedLanguages3(pPassengers, pAcceptedLanguages, pNotAcceptedLanguages){
+function findNamesOfPassengersByAcceptedAndNotAcceptedLanguages(pPassengers, pAcceptedLanguages, pNotAcceptedLanguages){
     return pPassengers
             .filter(person => person.languages.filter(lang => pAcceptedLanguages.includes(lang)).length == pAcceptedLanguages.length
                               && person.languages.filter(lang => pNotAcceptedLanguages.includes(lang)).length == 0)
